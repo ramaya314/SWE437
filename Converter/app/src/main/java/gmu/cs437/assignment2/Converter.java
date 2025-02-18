@@ -3,23 +3,12 @@ package gmu.cs437.assignment2;
 public class Converter {
 
     /**
-     * Utility function to round a float value to two decimal places.
-     * @param num The float number to round.
-     * @return The rounded float number.
-     */
-    public static float round(float num) {
-        return Math.round(num * 100.0f) / 100.0f;
-    }
-
-    /**
      * Converts Fahrenheit to Celsius.
      * @param f Temperature in Fahrenheit.
      * @return Equivalent temperature in Celsius.
      */
     public static float convertF2C(float f) {
-        f = round(f);
-        float c = (((f - 32.0f) * 5.0f) / 9.0f);
-        return round(c);
+        return (((f - 32.0f) * 5.0f) / 9.0f);
     }
 
     /**
@@ -28,9 +17,7 @@ public class Converter {
      * @return Equivalent temperature in Fahrenheit.
      */
     public static float convertC2F(float c) {
-        c = round(c);
-        float f = ((c * 9.0f / 5.0f) + 32.0f);
-        return round(f);
+        return ((c * 9.0f / 5.0f) + 32.0f);
     }
 
     /**
@@ -39,9 +26,7 @@ public class Converter {
      * @return Equivalent length in centimeters.
      */
     public static float convertIn2Cm(float inches) {
-        inches = round(inches);
-        float cm = inches * 2.54f;
-        return round(cm);
+        return inches * 2.54f;
     }
 
     /**
@@ -50,9 +35,7 @@ public class Converter {
      * @return Equivalent length in inches.
      */
     public static float convertCm2In(float cm) {
-        cm = round(cm);
-        float inches = cm * 0.3937f;
-        return round(inches);
+        return cm * 0.3937f;
     }
 
     /**
@@ -61,9 +44,7 @@ public class Converter {
      * @return Equivalent length in meters.
      */
     public static float convertF2M(float feet) {
-        feet = round(feet);
-        float meters = feet * 0.3048f;
-        return round(meters);
+        return feet * 0.3048f;
     }
 
     /**
@@ -72,9 +53,7 @@ public class Converter {
      * @return Equivalent length in feet.
      */
     public static float convertM2F(float meters) {
-        meters = round(meters);
-        float feet = meters / 0.3048f;
-        return round(feet);
+        return meters / 0.3048f;
     }
 
     /**
@@ -83,9 +62,7 @@ public class Converter {
      * @return Equivalent distance in kilometers.
      */
     public static float convertM2K(float miles) {
-        miles = round(miles);
-        float km = miles * 1.609f;
-        return round(km);
+        return miles * 1.609f;
     }
 
     /**
@@ -94,9 +71,7 @@ public class Converter {
      * @return Equivalent distance in miles.
      */
     public static float convertK2M(float kilometers) {
-        kilometers = round(kilometers);
-        float miles = kilometers * 0.6214f;
-        return round(miles);
+        return kilometers * 0.6214f;
     }
 
     /**
@@ -105,9 +80,7 @@ public class Converter {
      * @return Equivalent volume in liters.
      */
     public static float convertG2L(float gallons) {
-        gallons = round(gallons);
-        float liters = gallons * 3.785f;
-        return round(liters);
+        return gallons * 3.785f;
     }
 
     /**
@@ -116,9 +89,7 @@ public class Converter {
      * @return Equivalent volume in gallons.
      */
     public static float convertL2G(float liters) {
-        liters = round(liters);
-        float gallons = liters / 3.785f;
-        return round(gallons);
+        return liters / 3.785f;
     }
 
     /**
@@ -127,9 +98,7 @@ public class Converter {
      * @return Equivalent weight in grams.
      */
     public static float convertOz2G(float ounces) {
-        ounces = round(ounces);
-        float grams = ounces * 28.35f;
-        return round(grams);
+        return ounces * 28.35f;
     }
 
     /**
@@ -138,9 +107,7 @@ public class Converter {
      * @return Equivalent weight in ounces.
      */
     public static float convertG2Oz(float grams) {
-        grams = round(grams);
-        float ounces = grams / 28.35f;
-        return round(ounces);
+        return grams / 28.35f;
     }
 
     /**
@@ -149,9 +116,7 @@ public class Converter {
      * @return Equivalent weight in kilograms.
      */
     public static float convertLb2K(float pounds) {
-        pounds = round(pounds);
-        float kg = pounds * 0.4536f;
-        return round(kg);
+        return pounds * 0.4536f;
     }
 
     /**
@@ -160,8 +125,24 @@ public class Converter {
      * @return Equivalent weight in pounds.
      */
     public static float convertK2Lb(float kilograms) {
-        kilograms = round(kilograms);
-        float pounds = kilograms * 2.205f;
-        return round(pounds);
+        return kilograms * 2.205f;
+    }
+
+    /**
+     * Converts Hours to seconds.
+     * @param hours time in hours.
+     * @return Equivalent time in seconds.
+     */
+    public static float convertHr2Sec(float hours) {
+        return hours * 60f * 60f;
+    }
+
+    /**
+     * Converts seconds to hours.
+     * @param seconds time in seconds.
+     * @return Equivalent time in hours.
+     */
+    public static float convertSec2Hr(float seconds) {
+        return seconds / 60f / 60f;
     }
 }
