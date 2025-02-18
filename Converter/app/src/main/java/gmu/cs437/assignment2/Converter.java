@@ -127,4 +127,22 @@ public class Converter {
     public static float convertK2Lb(float kilograms) {
         return kilograms * 2.205f;
     }
+
+    /**
+     * Converts Hours to seconds.
+     * @param hours time in hours.
+     * @return Equivalent time in seconds.
+     */
+    public static float convertHr2Sec(float hours) {
+        return hours * 60f * 60f;
+    }
+
+    /**
+     * Converts seconds to hours.
+     * @param seconds time in seconds.
+     * @return Equivalent time in hours.
+     */
+    public static float convertSec2Hr(float seconds) {
+        return seconds / 60f / 60f;
+    }
 }

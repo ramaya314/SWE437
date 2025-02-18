@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         conversions.add(new Conversion("Gallon (gal)",      "Liter (L)",        Converter::convertG2L,      Converter::convertL2G));
         conversions.add(new Conversion("Ounce (oz)",        "Gram (g)",         Converter::convertOz2G,     Converter::convertG2Oz));
         conversions.add(new Conversion("Pound (lb)",        "Kilogram (kg)",    Converter::convertLb2K,     Converter::convertK2Lb));
+        conversions.add(new Conversion("Hours (hr)",        "Seconds (s)",      Converter::convertHr2Sec,   Converter::convertSec2Hr));
 
         ArrayAdapter<Conversion> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, conversions);
         unitSpinner.setAdapter(adapter);
