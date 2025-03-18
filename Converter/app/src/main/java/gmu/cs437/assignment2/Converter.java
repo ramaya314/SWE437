@@ -24,6 +24,24 @@ public class Converter {
     }
 
     /**
+     * Converts celsius degrees to kelvin.
+     * @param c the degrees in celsius
+     * @return Equivalent degrees in kelvin
+     */
+    public static float convertC2K(float c) {
+        return 0;
+    }
+
+    /**
+     * Converts kelvin degrees to celsius.
+     * @param k the degrees in kelvin
+     * @return Equivalent degrees in celsius
+     */
+    public static float convertK2C(float k) {
+        return 0;
+    }
+
+    /**
      * Converts miles per hour to kilometers per hour.
      * @param mph the speed in miles per hour
      * @return Equivalent speed in kilometres per hour.
