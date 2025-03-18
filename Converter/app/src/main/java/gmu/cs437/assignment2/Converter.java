@@ -20,6 +20,7 @@ public class Converter {
         conversions.add(new Conversion("Pound (lb)",        "Kilogram (kg)",    Converter::convertLb2K,     Converter::convertK2Lb));
         conversions.add(new Conversion("Hours (hr)",        "Seconds (s)",      Converter::convertHr2Sec,   Converter::convertSec2Hr));
         conversions.add(new Conversion("Miles per hour (Mph)","Kilometers per hour (Kph)",      Converter::convertMph2Kph,   Converter::convertKph2Mph));
+        conversions.add(new Conversion("Kelvin (K)","Celsius (C)",      Converter::convertK2C,   Converter::convertC2K));
         return conversions;
     }
 
@@ -29,7 +30,7 @@ public class Converter {
      * @return Equivalent degrees in kelvin
      */
     public static float convertC2K(float c) {
-        return 0;
+        return c + 237.15f;
     }
 
     /**
@@ -38,7 +39,7 @@ public class Converter {
      * @return Equivalent degrees in celsius
      */
     public static float convertK2C(float k) {
-        return 0;
+        return k - 237.15f;
     }
 
     /**
