@@ -19,6 +19,7 @@ public class Converter {
         conversions.add(new Conversion("Ounce (oz)",        "Gram (g)",         Converter::convertOz2G,     Converter::convertG2Oz));
         conversions.add(new Conversion("Pound (lb)",        "Kilogram (kg)",    Converter::convertLb2K,     Converter::convertK2Lb));
         conversions.add(new Conversion("Hours (hr)",        "Seconds (s)",      Converter::convertHr2Sec,   Converter::convertSec2Hr));
+        conversions.add(new Conversion("Miles per hour (Mph)","Kilometers per hour (Kph)",      Converter::convertMph2Kph,   Converter::convertKph2Mph));
         return conversions;
     }
 
@@ -28,7 +29,7 @@ public class Converter {
      * @return Equivalent speed in kilometres per hour.
      */
     public static float convertMph2Kph(float mph) {
-        return 0f;
+        return mph * 1.60934f;
     }
 
     /**
@@ -37,7 +38,7 @@ public class Converter {
      * @return Equivalent speed in miles per hour.
      */
     public static float convertKph2Mph(float kph) {
-        return 0f;
+        return kph * 0.621371f;
     }
 
     /**
