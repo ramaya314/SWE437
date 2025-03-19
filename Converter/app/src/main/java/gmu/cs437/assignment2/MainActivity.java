@@ -38,16 +38,7 @@ public class MainActivity extends AppCompatActivity {
         clearButton = findViewById(R.id.clearButton);
         swapButton = findViewById(R.id.swapButton);
 
-        conversions = new ArrayList<>();
-        conversions.add(new Conversion("Fahrenheit (Fº)",   "Celsius (Cº)",     Converter::convertF2C,      Converter::convertC2F));
-        conversions.add(new Conversion("Inch (in)",         "Centimeter (cm)",  Converter::convertIn2Cm,    Converter::convertCm2In));
-        conversions.add(new Conversion("Feet (ft)",         "Meter (m)",        Converter::convertF2M,      Converter::convertM2F));
-        conversions.add(new Conversion("Mile (mi)",         "Kilometer (km)",   Converter::convertM2K,      Converter::convertK2M));
-        conversions.add(new Conversion("Gallon (gal)",      "Liter (L)",        Converter::convertG2L,      Converter::convertL2G));
-        conversions.add(new Conversion("Ounce (oz)",        "Gram (g)",         Converter::convertOz2G,     Converter::convertG2Oz));
-        conversions.add(new Conversion("Pound (lb)",        "Kilogram (kg)",    Converter::convertLb2K,     Converter::convertK2Lb));
-        conversions.add(new Conversion("Hours (hr)",        "Seconds (s)",      Converter::convertHr2Sec,   Converter::convertSec2Hr));
-
+        conversions = Converter.getProgramConversions();
         ArrayAdapter<Conversion> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, conversions);
         unitSpinner.setAdapter(adapter);
 

@@ -1,6 +1,64 @@
 package gmu.cs437.assignment2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Converter {
+
+    /**
+     * Returns the list of conversions that the program should feature on its UI
+     * @return The list of conversions
+     */
+    public static List<Conversion> getProgramConversions() {
+        List<Conversion> conversions = new ArrayList<>();
+        conversions.add(new Conversion("Fahrenheit (Fº)",   "Celsius (Cº)",     Converter::convertF2C,      Converter::convertC2F));
+        conversions.add(new Conversion("Inch (in)",         "Centimeter (cm)",  Converter::convertIn2Cm,    Converter::convertCm2In));
+        conversions.add(new Conversion("Feet (ft)",         "Meter (m)",        Converter::convertF2M,      Converter::convertM2F));
+        conversions.add(new Conversion("Mile (mi)",         "Kilometer (km)",   Converter::convertM2K,      Converter::convertK2M));
+        conversions.add(new Conversion("Gallon (gal)",      "Liter (L)",        Converter::convertG2L,      Converter::convertL2G));
+        conversions.add(new Conversion("Ounce (oz)",        "Gram (g)",         Converter::convertOz2G,     Converter::convertG2Oz));
+        conversions.add(new Conversion("Pound (lb)",        "Kilogram (kg)",    Converter::convertLb2K,     Converter::convertK2Lb));
+        conversions.add(new Conversion("Hours (hr)",        "Seconds (s)",      Converter::convertHr2Sec,   Converter::convertSec2Hr));
+        conversions.add(new Conversion("Miles per hour (Mph)","Kilometers per hour (Kph)",      Converter::convertMph2Kph,   Converter::convertKph2Mph));
+        conversions.add(new Conversion("Kelvin (K)","Celsius (C)",      Converter::convertK2C,   Converter::convertC2K));
+        return conversions;
+    }
+
+    /**
+     * Converts celsius degrees to kelvin.
+     * @param c the degrees in celsius
+     * @return Equivalent degrees in kelvin
+     */
+    public static float convertC2K(float c) {
+        return c + 237.15f;
+    }
+
+    /**
+     * Converts kelvin degrees to celsius.
+     * @param k the degrees in kelvin
+     * @return Equivalent degrees in celsius
+     */
+    public static float convertK2C(float k) {
+        return k - 237.15f;
+    }
+
+    /**
+     * Converts miles per hour to kilometers per hour.
+     * @param mph the speed in miles per hour
+     * @return Equivalent speed in kilometres per hour.
+     */
+    public static float convertMph2Kph(float mph) {
+        return mph * 1.60934f;
+    }
+
+    /**
+     * Converts kilometres per hour to miles per hour.
+     * @param kph the speed in kilometres per hour.
+     * @return Equivalent speed in miles per hour.
+     */
+    public static float convertKph2Mph(float kph) {
+        return kph * 0.621371f;
+    }
 
     /**
      * Converts Fahrenheit to Celsius.
